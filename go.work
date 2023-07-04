@@ -9,4 +9,5 @@ use (
 	./13switchcase
 	./14loops
 	./15functions
+	./16methods
 )
