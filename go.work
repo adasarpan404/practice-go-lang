@@ -1,3 +1,12 @@
 go 1.20
 
-use ./09slices
+use (
+	./04conversion
+	./09slices
+	./10maps
+	./11mystructs
+	./12ifelse
+	./13switchcase
+	./14loops
+	./15functions
+)
