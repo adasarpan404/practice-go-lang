@@ -1,19 +1,38 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+	"sync"
+)
 
-func runner1() {
-	fmt.Println("It is the first runner")
-}
-func runner2() {
-	fmt.Println("It is the second runner")
-}
-
-func execute() {
-	runner1()
-	runner2()
-}
+var wg sync.WaitGroup //pointer
 
 func main() {
-	execute()
+	websitelist := []string{
+		"https://lco.dev",
+		"https://go.dev",
+		"https://google.com",
+		"https://fb.com",
+		"https://github.com",
+	}
+
+	for _, web := range websitelist {
+		go getStatusCode(web)
+		wg.Add(1)
+	}
+
+	wg.Wait()
+
+}
+
+func getStatusCode(endPoint string) {
+
+	defer wg.Done()
+	res, err := http.Get(endPoint)
+
+	if err != nil {
+		fmt.Println("OOPS in endpoint")
+	}
+	fmt.Printf("%d status for %s \n", res.StatusCode, endPoint)
 }
