@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/adasarpan404/simpleEchoServer/config"
+	"github.com/adasarpan404/simpleEchoServer/server"
 )
 
 func setUpFlags() {
@@ -15,5 +16,6 @@ func setUpFlags() {
 func main() {
 	setUpFlags()
 	fmt.Println("Server started running for 4099")
+	server.RunServer()
 
 }
