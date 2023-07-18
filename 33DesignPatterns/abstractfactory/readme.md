@@ -7,8 +7,8 @@
 
 Imagine that you’re creating a furniture shop simulator. Your code consists of classes that represent:
 
-1. A family of related products, say: _Chair_ + _Sofa_ + _CoffeeTable_.
-2. Several variants of this family. For example, products _Chair_ + _Sofa_ + _CoffeeTable_ are available in these variants: _Modern_, _Victorian_, _ArtDeco_.
+1. A family of related products, say: `Chair` + `Sofa` + `CoffeeTable`.
+2. Several variants of this family. For example, products `Chair` + `Sofa` + `CoffeeTable` are available in these variants: `Modern`, `Victorian`, `ArtDeco`.
 
 You need a way to create individual furniture objects so that they match other objects of the same family. Customers get quite mad when they receive non-matching furniture.
 
@@ -34,9 +34,9 @@ Also, you don’t want to change existing code when adding new products or famil
 
 - You avoid tight coupling between concrete products and client code.
 
-- _Single Responsibility Principle_. You can extract the product creation code into one place, making the code easier to support.
+- `Single Responsibility Principle`. You can extract the product creation code into one place, making the code easier to support.
 
-- _Open/Closed Principle_. You can introduce new variants of products without breaking existing client code.
+- `Open/Closed Principle`. You can introduce new variants of products without breaking existing client code.
 
 ## Cons
 
