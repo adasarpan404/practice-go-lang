@@ -31,3 +31,15 @@ As a result, you will end up with pretty nasty code, riddled with conditionals t
 7. If there are too many product types and it doesn’t make sense to create subclasses for all of them, you can reuse the control parameter from the base class in subclasses. For instance, imagine that you have the following hierarchy of classes: the base Mail class with a couple of subclasses: AirMail and GroundMail; the Transport classes are Plane, Truck and Train. While the AirMail class only uses Plane objects, GroundMail may work with both Truck and Train objects. You can create a new subclass (say TrainMail) to handle both cases, but there’s another option. The client code can pass an argument to the factory method of the GroundMail class to control which product it wants to receive.
 
 8. If, after all of the extractions, the base factory method has become empty, you can make it abstract. If there’s something left, you can make it a default behavior of the method.
+
+## Pros
+
+- You avoid tight coupling between the creator and the concrete products.
+
+- Single Responsibility Principle. You can move the product creation code into one place in the program, making the code easier to support.
+
+- Open/Closed Principle. You can introduce new types of products into the program without breaking existing client code.
+
+## Cons
+
+- The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. The best case scenario is when you’re introducing the pattern into an existing hierarchy of creator classes.
