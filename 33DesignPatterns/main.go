@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 
+	abstractFactory "github.com/adasarpan404/designPatterns/abstractfactory"
 	"github.com/adasarpan404/designPatterns/factory"
 )
 
@@ -25,6 +26,8 @@ func main() {
 	if strings.EqualFold(input, "factory") {
 		fmt.Println(true)
 		factory.FactoryUsage()
+	} else if strings.EqualFold(input, "abstractfactory") {
+		abstractFactory.AbstractFactory()
 	} else {
 		fmt.Println("Invalid input.")
 	}
