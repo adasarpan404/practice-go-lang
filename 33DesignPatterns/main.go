@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	abstractFactory "github.com/adasarpan404/designPatterns/abstractfactory"
+	"github.com/adasarpan404/designPatterns/builder"
 	"github.com/adasarpan404/designPatterns/factory"
 )
 
@@ -28,6 +29,8 @@ func main() {
 		factory.FactoryUsage()
 	} else if strings.EqualFold(input, "abstractfactory") {
 		abstractFactory.AbstractFactory()
+	} else if strings.EqualFold(input, "builder") {
+		builder.Builder()
 	} else {
 		fmt.Println("Invalid input.")
 	}
