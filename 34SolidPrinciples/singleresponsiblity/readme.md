@@ -1,6 +1,6 @@
 # Single Responsibility
 
-The idea behind the Single Responsibility Principle is that every class, module and function should have only one responsibility. 
+The idea behind the Single Responsibility Principle is that every class, module and function should have only one responsibility.
 
 ```java
 public class Student {
@@ -19,9 +19,9 @@ public class Student {
 }
 ```
 
-The Student class violates the single responsibility principle. 
+The Student class violates the single responsibility principle.
 
-Class `Student` has three purpose. 
+Class `Student` has three purpose.
 
 1. registerStudent
 2. calculate_Student_Results
@@ -56,4 +56,3 @@ public class StudentEmails {
 ```
 
 Now we've separated each functionality in our program. We can call the classes anywhere we want to use them in our code.
-
