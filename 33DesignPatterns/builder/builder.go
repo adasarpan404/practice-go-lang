@@ -15,7 +15,7 @@ func (c *Car) Drive() {
 type Bike struct{}
 
 func (b *Bike) Drive() {
-	fmt.Println("Driving a car.")
+	fmt.Println("D.")
 }
 
 type Plane struct{}
